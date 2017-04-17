@@ -22,3 +22,45 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Artist::class, function (Faker\Generator $faker) {
+
+    return [
+        'name' => $faker->name,
+    ];
+});
+
+$factory->define(App\Genre::class, function (Faker\Generator $faker) {
+
+    return [
+        'name' => $faker->word,
+        'description' => $faker->paragraph(),
+    ];
+});
+
+$factory->define(App\Album::class, function (Faker\Generator $faker) {
+
+    return [
+        'name' => $faker->words(2, true),
+        'artist_id' => function() {
+            return factory(App\Artist::class)->create()->id;
+        },
+        'genre_id' => function() {
+            return factory(App\Genre::class)->create()->id;
+        },
+    ];
+});
+
+$factory->define(App\Song::class, function (Faker\Generator $faker) {
+
+    return [
+        'name' => $faker->words(2, true),
+        'artist_id' => function() {
+            return factory(App\Artist::class)->create()->id;
+        },
+        'album_id' => function() {
+            return factory(App\Album::class)->create()->id;
+        },
+        'number' => 1,
+    ];
+});
