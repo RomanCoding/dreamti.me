@@ -17,7 +17,10 @@
                         </figure>
                     </div>
                     <div class="media-content">
-                        <p class="title is-4">{{ $album->artist->name }}</p>
+                        <p class="title is-4">{{ $album->name }}</p>
+                        <p class="subtitle is-6">
+                            <a href="{{ $album->artist->path() }}">{{ $album->artist->name }}</a>
+                        </p>
                     </div>
                 </div>
                 <div class="content">

@@ -5,7 +5,7 @@
                 DreamTime
             </a>
             <a href="/" class="nav-item is-tab is-hidden-mobile {{ checkActive('/') }}">Home</a>
-            <a class="nav-item is-tab is-hidden-mobile">Features</a>
+            <a href="/albums" class="nav-item is-tab is-hidden-mobile {{ checkActive('albums') }}">Albums</a>
             <a class="nav-item is-tab is-hidden-mobile">Pricing</a>
             <a class="nav-item is-tab is-hidden-mobile">About</a>
         </div>
@@ -16,7 +16,7 @@
     </span>
         <div class="nav-right nav-menu">
             <a href="/" class="nav-item is-tab is-hidden-tablet {{ checkActive('/') }}">Home</a>
-            <a class="nav-item is-tab is-hidden-tablet">Features</a>
+            <a href="/albums" class="nav-item is-tab is-hidden-tablet {{ checkActive('albums') }}">Albums</a>
             <a class="nav-item is-tab is-hidden-tablet">Pricing</a>
             <a class="nav-item is-tab is-hidden-tablet">About</a>
 

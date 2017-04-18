@@ -25,4 +25,14 @@ class Artist extends Model
     {
         return $this->hasMany(Song::class);
     }
+
+    /**
+     * Get a string path for the artist.
+     *
+     * @return string
+     */
+    public function path()
+    {
+        return '/artists/' . $this->id;
+    }
 }

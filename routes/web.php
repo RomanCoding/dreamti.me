@@ -19,4 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/albums', 'AlbumsController@index');
+Route::get('/albums', 'AlbumController@index');
+
+Route::get('/artists/{artist}', 'ArtistController@show');
